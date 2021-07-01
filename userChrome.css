@@ -9,7 +9,7 @@
 
 :root {
   /* Appmenu: Reduce item padding */
-  --arrowpanel-menuitem-padding-block: 2px 8px !important;
+  --arrowpanel-menuitem-padding-block: 4px 8px !important;
   /* Tabbar: reduce tab margin */
   --tab-block-margin: 4px 3px !important;
 }
@@ -36,17 +36,6 @@
 	--urlbar-toolbar-height: 30px !important;
 }
 
-/* Searchbar: Ensure toolbar height doesn't augment when searchbar is visible */
-#urlbar-container, 
-#search-container {
-	padding-block: 0 !important;
-}
-
-/* Searchbar: Make sure the min-height of the input is the same as the popup */
-#search-container {
-  min-width: 192px !important;
-}
-
 /* Toolbar: Reduce spacing */
 #urlbar-container {
 	--urlbar-container-height: 30px !important;
@@ -56,37 +45,4 @@
 /* Reload Button: Fix vertical alignment */
 #reload-button {
 	margin-block-start: -2px !important;
-}
-
-
-/* context menuitem padding and rounded hover style changes */
-@media (-moz-os-version: windows-win10) {
-  
- menupopup > menuitem,
- menupopup > menu
-  {
-     border-radius: 4px !important;
-     margin: 0 8px 2.5px 8px !important;
- }
- /* context menu top left button padding */
- menugroup > menuitem:first-child {  
-     padding-left: 8px !important;
- }
- /* context menu top right button padding */
- menugroup > menuitem:last-child {  
-     padding-right: 8px !important;
- 
- }
-  
- /* context menu top buttons radius */
- menugroup > menuitem > hbox > image {  
-   border-radius: 4px !important;
- }
-
- /* context menu padding */
- menupopup > menuitem,
- menupopup > menu {
-   padding-block: 0.15em !important;
- }
-  
 }
